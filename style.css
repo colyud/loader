@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.spinner-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.spinner {
+    position: absolute;
+    width: calc(100% - 9.9px);
+    height: calc(100% - 9.9px);
+    border: 5px solid transparent;
+    border-top-color: #ff5722;
+    border-radius: 50%;
+    -webkit-animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
+    animation: spin 5s cubic-bezier(0.17, 0.49, 0.96, 0.76) infinite;
+}
+-webkit-@keyframes spin {
+    -webkit-from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    -webkit-to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.circle,
+.color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+.circle *,
+.color * {
+    margin: 0 1em;
+}
